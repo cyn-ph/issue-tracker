@@ -1,7 +1,6 @@
 package com.issuetracker.ui
 
-class User(
+data class User(
     val id: Long,
     val name: String
-) {
-}
+)

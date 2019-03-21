@@ -77,7 +77,14 @@ open class IssueRepository(
     }
 
     private fun mapToIssue(issueEntity: IssueEntity): Issue {
-        return Issue(issueEntity.id!!, issueEntity.title, mapState(issueEntity.state), issueEntity.userId)
+        return Issue(
+            issueEntity.id!!,
+            issueEntity.title,
+            mapState(issueEntity.state),
+            issueEntity.userId,
+            emptyList(),
+            emptyList()
+        )
     }
 
     private fun getIssueComments(issueId: Long): List<String> {
